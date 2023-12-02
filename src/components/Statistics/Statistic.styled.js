@@ -15,10 +15,6 @@ display: flex;
 `
 
 export const StyledItem = styled.li`
-${'' /* background-color: #52c3f7; */}
-  /* #a33cf3 */
-  /* #e74b69 */
-  /* #20b8c5 */
   background-color:${props => props.$index % 2 === 0 ? '#52c3f7' : '#a33cf3'};
   color: antiquewhite;
   padding: 20px;

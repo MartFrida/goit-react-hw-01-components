@@ -1,18 +1,19 @@
 import React from 'react'
+import { StyledAvatar, StyledItem, StyledList, StyledStatus } from './FriendsList.styled'
 
 export const FriendList = ({ friends }) => {
 
   return (
-    <ul class="friend-list">
+    <StyledList>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li class="item" key={id}>
-            <span class="status">{isOnline}</span>
-            <img class="avatar" src={avatar} alt="User avatar" width="48" />
+          <StyledItem key={id}>
+            <StyledStatus status={isOnline} />
+            <StyledAvatar src={avatar} alt="User avatar" width="48" />
             <p class="name">{name}</p>
-          </li>
+          </StyledItem>
         )
       })}
-    </ul>
+    </StyledList>
   )
 }
