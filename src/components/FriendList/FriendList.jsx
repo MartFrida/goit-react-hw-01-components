@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledAvatar, StyledItem, StyledList, StyledStatus } from './FriendsList.styled'
+import { StyledAvatar, StyledItem, StyledList, StyledStatus } from './FriendsList.styled';
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
 
@@ -10,10 +11,17 @@ export const FriendList = ({ friends }) => {
           <StyledItem key={id}>
             <StyledStatus status={isOnline} />
             <StyledAvatar src={avatar} alt="User avatar" width="48" />
-            <p class="name">{name}</p>
+            <p className="name">{name}</p>
           </StyledItem>
         )
       })}
     </StyledList>
   )
+}
+
+FriendList.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.number,
 }
