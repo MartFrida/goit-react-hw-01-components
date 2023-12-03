@@ -10,7 +10,6 @@ export const FriendList = ({ friends }) => {
         return (
           <StyledItem key={id}>
             <StyledStatus $status={isOnline} />
-            {console.log(typeof (isOnline))}
             <StyledAvatar src={avatar} alt="User avatar" width="48" />
             <p className="name">{name}</p>
           </StyledItem>
@@ -21,12 +20,9 @@ export const FriendList = ({ friends }) => {
 }
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-      isOnline: PropTypes.bool,
-      id: PropTypes.number,
-    }))
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.number,
 
 }

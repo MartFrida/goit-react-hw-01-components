@@ -16,7 +16,7 @@ border: 1px solid #ddd;
   text-align: center;
 `
 export const StyledTr = styled.tr`
-background-color:${props => props.index % 2 === 0 ? "#f2f2f2" : "#ddd"}
+background-color:${props => props.$index % 2 === 0 ? "#f2f2f2" : "#ddd"}
 `
 
 export const StyledTd = styled.td`
