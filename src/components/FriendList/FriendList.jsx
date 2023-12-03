@@ -9,7 +9,8 @@ export const FriendList = ({ friends }) => {
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
           <StyledItem key={id}>
-            <StyledStatus status={isOnline} />
+            <StyledStatus $status={isOnline} />
+            {console.log(typeof (isOnline))}
             <StyledAvatar src={avatar} alt="User avatar" width="48" />
             <p className="name">{name}</p>
           </StyledItem>

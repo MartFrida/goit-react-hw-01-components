@@ -17,7 +17,7 @@ export const TransactionHistory = ({ items }) => {
         <tbody>
           {items.map(({ id, type, amount, currency }, index) => {
             return (
-              <StyledTr index={index} key={id}>
+              <StyledTr $index={index} key={id}>
                 <StyledTd>{type}</StyledTd>
                 <StyledTd>{amount}</StyledTd>
                 <StyledTd>{currency}</StyledTd>
